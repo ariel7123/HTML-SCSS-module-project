@@ -477,7 +477,7 @@ img {
   justify-content: space-between;
   text-align: center;
   min-width: 15rem;
-  min-height: 17rem;
+  min-height: 16rem;
   border-radius: 2rem;
 }
 .gridCont .col11 h4 {
@@ -545,7 +545,6 @@ img {
 
   img {
     width: fit;
-    /* תמונות קטנות יותר */
     height: fit;
   }
 }
@@ -558,7 +557,6 @@ img {
 
   img {
     width: fit;
-    /* תמונות קטנות יותר */
     height: fit;
   }
 }
@@ -570,8 +568,7 @@ img {
   }
 
   img {
-    width: 10rem;
-    /* תמונות קטנות יותר */
-    height: 12rem;
+    width: fit;
+    height: fit;
   }
 }

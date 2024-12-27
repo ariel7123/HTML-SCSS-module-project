@@ -510,9 +510,8 @@ img{
         justify-content: space-between;
         text-align: center;
         min-width: 15rem;
-        min-height: 17rem;
+        min-height: 16rem;
         border-radius: 2rem;
-        // transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         h4{
             padding-top: 0.7rem;
@@ -583,7 +582,7 @@ img{
     }
 
     img {
-        width: fit; /* תמונות קטנות יותר */
+        width: fit;
         height: fit;
     }
 }
@@ -595,7 +594,7 @@ img{
     }
 
     img {
-        width: fit; /* תמונות קטנות יותר */
+        width: fit;
         height: fit;
     }
 
@@ -608,7 +607,7 @@ img{
     }
 
     img {
-        width: 10rem; /* תמונות קטנות יותר */
-        height: 12rem;
+        width: fit;
+        height: fit;
     }
 }
