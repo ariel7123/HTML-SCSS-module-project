@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 :root {
   --text_color_main: #000000;
@@ -441,35 +442,36 @@ header {
   gap: var(--min-cards-gap, 2rem);
 }
 
-#productsPage {
-  margin: auto;
-}
-#productsPage header {
+header {
   display: block;
 }
-#productsPage img {
+
+img {
   border-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   width: 15rem;
   height: 17rem;
 }
-#productsPage .productsHeader h3 {
+
+.productsHeader h3 {
   text-align: center;
   text-decoration: underline;
 }
-#productsPage .gridCont {
-  max-width: min(90%, 1200px);
+
+.gridCont {
+  width: min(80%, 1340px);
   margin: auto;
 }
-#productsPage .gridCont .grid12 {
+.gridCont .grid12 {
   display: grid;
   grid-template: repeat(3, 1fr)/repeat(4, 1fr);
-  gap: 6rem 3.5rem;
+  /* עיצוב לגריד ברירת מחדל */
+  gap: 6rem 6rem;
   padding: 3rem;
   text-align: center;
 }
-#productsPage .gridCont .col11 {
+.gridCont .col11 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -478,19 +480,19 @@ header {
   min-height: 17rem;
   border-radius: 2rem;
 }
-#productsPage .gridCont .col11 h4 {
+.gridCont .col11 h4 {
   padding-top: 0.7rem;
 }
-#productsPage .gridCont .col11 h4, #productsPage .gridCont .col11 p {
+.gridCont .col11 h4, .gridCont .col11 p {
   padding-bottom: 0.2rem;
 }
-#productsPage .gridCont .col11 button {
+.gridCont .col11 button {
   margin-bottom: 0.7rem;
   border-radius: 15rem;
   padding: 0.7rem;
   animation: none;
 }
-#productsPage .gridCont .col11 button:hover {
+.gridCont .col11 button:hover {
   transform: none;
   animation: hover-btn 3s forwards;
 }
@@ -505,7 +507,7 @@ header {
     scale: 1;
   }
 }
-#productsPage .gridCont .col11:hover {
+.gridCont .col11:hover {
   animation: hover-col11 1s ease-out forwards;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -515,5 +517,41 @@ header {
   }
   100% {
     scale: 1.05;
+  }
+}
+
+/* עיצוב רספונסיבי למסכים קטנים */
+@media (max-width: 1024px) {
+  .gridCont .grid12 {
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+    /* 3 עמודות במקום 4 */
+    gap: 4rem 4rem;
+    /* מרווחים קטנים יותר */
+  }
+}
+@media (max-width: 768px) {
+  .gridCont .grid12 {
+    grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+    /* 2 עמודות במקום 3 */
+    gap: 2rem 2rem;
+  }
+
+  img {
+    width: 12rem;
+    /* תמונות קטנות יותר */
+    height: 14rem;
+  }
+}
+@media (max-width: 480px) {
+  .gridCont .grid12 {
+    grid-template: repeat(1, 1fr);
+    /* עמודה אחת */
+    gap: 1.5rem;
+  }
+
+  img {
+    width: 10rem;
+    /* תמונות קטנות יותר */
+    height: 12rem;
   }
 }
